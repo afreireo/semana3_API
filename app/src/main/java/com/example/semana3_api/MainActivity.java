@@ -37,9 +37,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void enviarVolley(View view){
-
-
+    public void enviarVolley(){
         String url = "https://jsonplaceholder.typicode.com/users";
         RequestQueue queue = Volley.newRequestQueue(this);
 
@@ -47,35 +45,13 @@ public class MainActivity extends AppCompatActivity {
                 new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        lblResultado.setText(response);
+                        lblResultado.setText(JsonParser.parseUsers(response));
                     }
                 },
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         lblResultado.setText("Error");
-                    }
-                });
-        queue.add(stringRequest);
-    }
-
-    public void enviarVolley(){
-
-
-        String url = "https://jsonplaceholder.typicode.com/users";
-        RequestQueue queue = Volley.newRequestQueue(this);
-
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        lblResultado.setText("Response is: "+ response);
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        lblResultado.setText("That didn't work!");
                     }
                 });
         queue.add(stringRequest);
