@@ -27,7 +27,7 @@ La aplicacion sigue los siguientes pasos:
 
 ## Video de Funcionamiento
 
-[screen-recording-20240605-221535_EZOHPZXU.webm](https://github.com/afreireo/semana3_API/assets/86501595/a3aefa02-2a38-4c7f-87fb-dc5bf1026823)
+[Funcinamiento.mp4](https://github.com/afreireo/semana3_API/assets/86501595/a3aefa02-2a38-4c7f-87fb-dc5bf1026823)
 
 
 
